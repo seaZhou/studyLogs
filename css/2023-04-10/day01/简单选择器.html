@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>简单选择器.html</title>
+	<style>
+		div {
+			color: #f00;
+		}
+		.box {
+			color: blue;
+		}
+		#home {
+			color: pink;
+		}
+	</style>
+</head>
+<body>
+	<!-- 强调:在同一个html文档中,id不能重复,是唯一的 -->
+	<div>我是div1</div>
+	<div class="box">我是div2</div>
+	<div id="home">我是div3</div>
+	<!-- class / id 的名称比较复杂 --> 
+	<div class="box-one box-first"></div>
+	<div class="box_one"></div>
+	<!-- 大驼峰/小驼峰  这种在css中用的不多-->
+	<div class="boxOne BoxFirst"></div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>后代选择器</title>
+	<style>
+		body {
+			text-align: center;
+		}
+		/* 后代选择器 */
+		.home span {
+			color: #f00;
+			font-size: 30px;
+		}
+		/* 直接子代选择器 */
+		.home > span {
+			color: #fff;
+			background-color: #f00;
+		}
+	</style>
+</head>
+<body>
+	<div class="home">
+		<span>啦啦啦啦啦</span>
+		<div class="box">
+			<span>呵呵呵呵呵</span>
+		</div>
+		
+		<div class="content">
+			<div class="des">
+				<p>
+					<span>哈哈哈哈哈</span>
+				</p>
+			</div>
+		</div>
+	</div>
+	<span>嘻嘻嘻嘻嘻</span>
+	<div>嘿嘿嘿</div>
+</body>
+</html>

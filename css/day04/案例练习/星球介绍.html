@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>星球介绍</title>
+	<style>
+		.item {
+			width: 300px;
+			/* 不让div独占一行  但是会产生缝隙 */
+			/* display: inline-block;
+			vertical-align: top; 垂直布局 */
+			/* float */
+			float: left;
+		}
+		/* 后代选择器 */
+		.item img {
+			width: 100%; /* 相对于包含块 */
+			height: 300px;
+		}
+		.keyword {
+			background-color: orange;
+			color: #fff;
+			font-size: 30px;
+		}
+	</style>
+</head>
+<body>
+	<h1>星球介绍</h1>
+	<div class="item">
+		<h2>木星</h2>
+		<!-- alt alternative 占位 -->
+		<img src="https://tse2-mm.cn.bing.net/th/id/OIP-C.O1-IbmsCw0JyqjfUZCYw-wHaHR?w=181&h=180&c=7&r=0&o=5&pid=1.7" alt="木星">
+		<p>
+			<span class="keyword">木星(Jupiter)</span>
+			是太阳系中距离太阳第五近的行星，也是太阳系中体积最大的行星。
+			古人早已认识这颗行星 ，罗马人以主神朱庇特命名这颗行星。古代中国则称木星为岁星，取其绕行天球 [19]  一周约为12年，与地支相同之故。到西汉时期，《史记‧天官书》作者司马迁从实际观测发现岁星呈青色，与“五行”学说联系在一起，正式把它命名为“木星”。
+		</p>
+	</div>
+	<div class="item">
+		<h2>地球</h2>
+		<!-- alt alternative 占位 -->
+		<img src="https://tse4-mm.cn.bing.net/th/id/OIP-C.oSDkXoU07A1Iqtsd-loTKgHaHa?w=181&h=181&c=7&r=0&o=5&pid=1.7" alt="木星">
+		<p>
+			<span class="keyword">地球(Earth)</span>
+			是距离太阳的第三颗行星，也是人类已知的唯一孕育和支持生命的天体。地球的表面大约 29.2% 是由大陆和岛屿组成的陆地。剩余的 70.8% 被水覆盖，大部分被海洋、海湾和其他咸水体覆盖，也被湖泊、河流和其他淡水体覆盖着，它们共同构成了水圈。地球的大部分极地地区都被冰覆盖。地球外层分为几个刚性构造板块，它们在数百万年的时间里在地表迁移，而其内部仍然保持活跃，有一个固体铁内核、一个产生地球磁场的液体外核，以及一个驱动板块构造的对流地幔等。
+		</p>
+	</div>
+</body>
+</html>

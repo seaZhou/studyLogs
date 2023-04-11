@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>text-align</title>
+	<style>
+		.box {
+			background-color: #f00;
+			height: 300px;
+			width: 300px;
+			/* 图片居中显示 */
+			/* text-align: center; */
+			color: #fff;
+			text-align: justify;
+			/* 对最后一行特定设置两端对齐 */
+			text-align-last: justify; 
+		}
+		.content {
+			width: 200px;
+			height: 200px;
+			background-color: #0f0;
+			/* 改变成行内级元素可以实现text-align:center 进行居中 */
+			/* display: inline-block; */
+			/* 对于块级元素居中还可以使用 */
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		中共中央文献编辑委员会编辑的《习近平著作选读》以习近平总书记在中国共产党第二十次全国代表大会上的报告《高举中国特色社会主义伟大旗帜，为全面建设社会主义现代化国家而团结奋斗》为开卷篇，其他著作按时间顺序编排。第一卷收入了习近平总书记在2012年11月至2017年10月这段时间内的重要著作，共有讲话、演讲、指示、批示、训令等71篇，部分著作是第一次公开发表。现将《习近平著作选读》第一卷主要篇目介绍如下。
+		<!-- <div class="content"></div> -->
+		<!-- <img src="../../image/test.avif" alt=""> -->
+	</div>
+</body>
+</html>

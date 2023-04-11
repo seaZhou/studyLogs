@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>文本相关的属性</title>
+	<link rel="stylesheet" href="../../day04/css/index.css">
+	<link rel="stylesheet" href="./../css/reset.css">
+	<style>
+		.baidu {
+			/* underline:下划线 */
+			text-decoration: underline;
+			cursor: pointer;
+		}
+		.google {
+			text-decoration : line-through;
+		}
+		.bing {
+			text-decoration: overline;
+			/* text-transform 属性值
+			capitalize: 首字母大写
+			
+			*/
+			text-transform: capitalize; 
+		}
+		/* em:相对于字体的大小 */
+		/* text-indent:2em;刚好是缩进两个字 */
+
+		/* 
+		
+		text-align
+		justify: 两端对齐
+		*/
+
+		.box {
+			background: #f00;
+			color: #fff;
+			text-align: justify;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<span class="keyword">text-decoration</span>
+		<span class="keyword">text-transform</span>
+		<span class="keyword">text-indent</span>
+		<span class="keyword">text-align(import)</span>
+		<span class="keyword">word/letter-spacing</span>
+	</div>
+	<!-- a元素默认有添加text-decoration -->
+	<a href="http://baidu.com">百度一下</a>
+	<span class="baidu">百度一下</span>
+	<span class="google">谷歌</span>
+	<span class="bing">bing</span>
+	
+
+	<div class="box">我是div元素</div>
+</body>
+</html>
