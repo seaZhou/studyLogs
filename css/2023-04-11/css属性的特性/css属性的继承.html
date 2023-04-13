@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>css属性的继承</title>
+	<style>
+		div.box {
+			color: #f00;
+			font-size: 30px;
+		}
+	</style>
+</head>
+<body>
+	<!--
+		如果一个属性具备继承性,那么该元素设置上后,它的后代元素都可以继承这个属性
+		如果后代元素自己有设置该属性,那么优先使用后代元素自己的属性
+	-->
+	<div class="box">
+		<h1>我是h1元素</h1>
+		<p>我是p元素</p>
+		<span>我是span元素</span>
+	</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>伪元素</title>
+	<style>
+		/* 常见的伪元素
+		
+			::first-line 可以针对首行进行设置
+			::first-letter 首字母
+
+			::before
+			::after
+
+		*/
+		.box {
+			width: 500px;
+			background-color: #f00;
+		}
+		.box::first-line {
+			color: #fff;
+			font-size: 30px;
+		}
+
+		.box::first-letter {
+			font-size: 50px;
+			color: blue
+		}
+
+		.box::before {
+			content: '123';
+		}
+		.box::after {
+			content: '321';
+		}
+		/* 对一些东西做微调的时候,用相对定位更好!!! */
+		.item::after {
+			content: url(../../../image/hot.92a15c5e.svg);
+			position: relative;
+			top: 2px;
+			left: 5px;
+		}
+
+		/* 额外补充 */
+		.box5::after {
+			/* 在使用伪元素的时候,content不能省略 */
+			content: '';
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			background-color: #f00;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">我是div元素我是div元素我是div元素我是div元素我是div元素我是div元素我是div元素我是div元素我是div元素我是div元素我是div元素我是div元素我是div元素我是div元素我是div元素我是div元素我是div元素我是div元素我是div元素</div>
+	<div class="item">我是</div>
+	<div class="box5">我是box5</div>
+</body>
+</html>

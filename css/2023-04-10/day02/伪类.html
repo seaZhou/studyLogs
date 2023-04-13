@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>伪类</title>
+	<!-- 伪类是选择器的一种,它用于选择处于特定的状态 -->
+	<style>
+		.box {
+			font-size: 30px;
+		}
+		/* :hover 伪类 */
+		div:hover {
+			color: #f00;
+		}
+		.box a {
+			font-size: 30px;
+		}
+		/* 常见的伪类:
+	
+		1.动态的伪类: :link :visited :hover :active :focus
+		2.目标伪类:  :target (了解)
+		3.语言伪类: :lang() (了解)
+		4.元素状态位列: :enabled :disabled :checked
+		5.结构伪类: :nth-child() ... (后续学习)
+		6.否定伪类: :not()(后续学习)
+		
+		*/
+	</style>
+</head>
+<body>
+	<div class="box">我是div1元素</div>
+	<div class="box">我是div2元素</div>
+	<div class="box">我是div3元素</div>
+	<a href="https://github.com">github</a>
+	<div class="box">
+		<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-classes">所有伪类链接</a>
+	</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<!-- 垂直放心上相邻的2个margin -->
+	<style>
+		.box1 {
+			width: 100px;
+			height: 100px;
+			background-color: #f00;
+			margin-bottom: 30px;
+		}
+		.box2 {
+			width: 100px;
+			height: 100px;
+			background-color: #0f0;
+			margin-top: 30px;
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		.box {
+			/* 行内级:行内非替换元素 span/a 行内替换元素 img/input inline-block */
+			width: 100px;
+			height: 100px;
+			color: #fff;
+			background-color: #00f;
+			/* 对于块级元素 block box: width = wdith + padding + border + margin */
+			margin: 0 auto; /* 也不算是一个好的方案,一般现在都是用flex布局 */
+		}
+		.container {
+			background: #0f0;
+			width: 800px;
+			height: 200px;
+		}
+	</style>
+</head>
+<body>
+	<dt>两个兄弟块级元素之间的上下margin的折叠</dt>
+	<dt>父子块级元素之间的margin的折叠(这种不常见,本身就是语法错误,父子之间应该用padding)</dt>
+	<div class="box1"></div>
+	<div class="box2"></div>
+
+
+	<div class="container">
+		<h3>块级元素的居中问题(水平)</h3>
+		<div class="box">我是box元素</div>
+	</div>
+</body>
+</html>

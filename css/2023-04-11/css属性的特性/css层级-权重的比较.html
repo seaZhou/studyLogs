@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>css层级-权重的比较</title>
+	<style>
+		div.box {
+			color: #f00 !important; /* 10000 */
+		}
+		input {
+			width: 200px;
+			height: 32px;
+		}
+	</style>
+</head>
+<body>
+	<!-- 行内替换元素: 例如:img,input
+	1>和其他的行内元素在同一行显示
+	2>可以设置宽度和高度
+	-->
+	<input type="text">
+	<div class="box">我是div元素</div>
+</body>
+</html>
