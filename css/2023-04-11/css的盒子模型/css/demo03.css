@@ -1,0 +1,51 @@
+a {
+	display: inline-block;
+}
+.item {
+	/* background-color: #fff; */
+	width: 300px;
+	margin:  0 auto;
+	text-align: left;
+}
+.item .album img {
+	width: 100%;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-o-border-radius: 8px;
+}
+.item .info a {
+	width: 100%;
+}
+.item .info p {
+	font-size: 15px;
+	margin-top: 8px;
+	/* 显示一行 省略 */
+	overflow: hidden;
+	text-overflow: ellipsis;
+	
+	 /*  显示多行,就不能设置这个*/
+	 /* white-space: nowrap; */
+	/* 显示几行的 */
+
+
+	display: -webkit-box;
+	/* clamp: 保留/保持的意思 */
+	/* 以下两个属性,必不可少,不然不生效!!! */
+	-webkit-line-clamp: 3; /* 2行的意思 */
+	-webkit-box-orient: vertical;
+	
+}
+
+.item .info .anchor {
+	color: #888;
+	font-size: 13px;
+	margin-top: 5px;
+}
+
+.item .info .anchor::before {
+	content: url(../../../../image/widget-up.svg);
+	position: relative;
+	top: 2px;
+}

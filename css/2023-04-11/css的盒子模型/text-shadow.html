@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.box {
+			font-size: 50px;
+			font-weight: 700;
+			color: #202c2d;
+			background: #FFFFFF;
+			text-shadow: 0 1px #808d93, -1px 0 #cdd2d5, -1px 2px #808d93, -2px 1px #cdd2d5, -2px 3px #808d93, -3px 2px #cdd2d5, -3px 4px #808d93, -4px 3px #cdd2d5, -4px 5px #808d93, -5px 4px #cdd2d5, -5px 6px #808d93, -6px 5px #cdd2d5, -6px 7px #808d93, -7px 6px #cdd2d5, -7px 8px #808d93, -8px 7px #cdd2d5;
+			color: #202c2d;
+		}
+		.content {
+			background-color: #f00;
+			color: #fff;
+			/* width height 是不生效的 */
+			/* width: 300px; */
+			/* height: 300px; */
+			/* 内边距:
+			
+			特殊:上下会被撑起来,但是不占据空间
+			; */
+			padding: 50px;
+
+			/* 特殊:上下会被撑起来,但是不占据空间 */
+			border: 50px solid orange;
+
+			/* 上下的margin是不生效 */
+			margin: 50px;
+		}
+
+
+		.box1 {
+			width: 100px;
+			height: 100px;
+			background-color: #f00;
+			color: orange;
+			padding: 30px;
+			border: 30px solid;
+		}
+
+		div.content {
+			padding: 50px;
+		}
+
+
+		.content-box {
+			box-sizing: content-box;
+			background-color: #f00;
+			color: orange;
+			width: 100px;
+			height: 100px;
+			padding: 30px;
+			border: 10px solid;
+		}
+		.border-box {
+			box-sizing: border-box;
+			background-color: green;
+			color: pink;
+			width: 100px;
+			height: 100px;
+			padding: 30px;
+			border: 10px solid;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">Hello jason</div>
+
+	<div>
+		<h3>行非费替换元素的特殊性</h3>
+		<span class="content">
+			我是span内容 呵呵哈哈哈
+		</span>
+		aaaaa
+		<div>bbbbbbb</div>
+	</div>
+
+
+	<div class="box1"></div>
+
+
+	<div class="content">
+		<h3>css属性 box-sizing</h3>
+		<dt>box-sizing用来设置盒子模型中宽高的行为</dt>
+		<dt>content-box</dt>
+		<dd>padding/border都布置在width/height外边</dd>
+		<dt>boder-box</dt>
+		<dd>padding/boder都布置在width/height里边</dd>
+	</div>
+
+
+	<div class="content-box">content-box</div>
+	<div class="border-box">border-box</div>
+</body>
+</html>

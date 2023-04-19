@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.box {
+			width: 100px;
+			height: 100px;
+			background-color: #f00;
+			color: #fff;
+
+			border: 20px solid #0f0;
+
+			padding: 50px;
+
+			outline: 30px solid orange;
+		}
+
+		/* 行内级元素设置margin无效 */
+		/* a  color: red 相当于给所有伪元素都设置了 */
+		a {
+			display: inline-block;
+			margin-top: 100px;
+			outline: none;
+		}
+		input {
+			outline: none;
+		}
+	</style>
+</head>
+<body>
+	outline 不占据空间
+	border 占据空间
+	<div class="box">外轮廓</div>
+	<a href="#">百度一下</a>
+	<input type="text">
+</body>
+</html>

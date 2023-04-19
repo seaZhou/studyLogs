@@ -1,0 +1,47 @@
+/* 块级元素/行内块级元素是可以存放人格的元素 */
+.item {
+	display: inline-block;
+	width: 234px;
+	height: 300px;
+	box-sizing: border-box;
+	padding: 25px 10px;
+	text-align: center;
+	background-color: #fff;
+	margin-top: 20px;
+}
+.item:hover {
+	box-shadow: 0 2px 20px 5px rgba(0, 0, 0, .1);
+}
+.item img {
+	width: 160px;
+	height: 160px;
+}
+
+.item .title {
+	margin-top: 14px;
+}
+
+.item .des {
+	color: #999;
+	margin-top: 8px;
+
+	/* 单行省略 */
+	white-space: nowrap;
+
+	overflow: hidden;
+
+	text-overflow: ellipsis; /* 省略号 */
+}
+
+.item .price {
+	margin-top: 14px;
+	font-size: 14px;
+}
+.item .new-price {
+	color: #ff6700;
+}
+
+.item .old-price {
+	color: #999;
+	text-decoration: line-through;
+}
