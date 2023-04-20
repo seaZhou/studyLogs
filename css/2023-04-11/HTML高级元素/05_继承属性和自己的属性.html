@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.box {
+			color: #f00 !important;
+		}
+		.container {
+			/* 即使上面是红色并且权重很高,但是依然是继承过来的,我自己也设置了,那么肯定是我自己的为主,显示绿色 */
+			/* 
+			 * 当后代元素继承过来的属性,优先使用自己的属性 !!!
+			
+			*/
+			color: #0f0;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		aaaaaaaaa
+		<div class="container">我是container的内容</div>
+	</div>
+</body>
+</html>

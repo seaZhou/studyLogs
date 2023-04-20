@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		ul li:nth-child(3) {
+			color: #f00;
+		}
+
+		ul li:nth-child(2n) {
+			color: #0f0;
+		}
+		ul li:nth-child(2n + 1) {
+			color: #00f;
+		}
+
+		div div:nth-child(4n + 1) {
+			color: #00f;
+		}
+		div div:nth-child(4n + 2) {
+			color: #f00;
+		}
+		div div:nth-child(4n + 3) {
+			color: orchid;
+		}
+		div div:nth-child(4n + 4) {
+			color: orange;
+		}
+
+		/* 前几个  -n + 5 代表前五个*/
+		div > div:nth-child(-n + 5) {
+			font-size: 20px;
+		}
+		/* 倒数的某一个时 nth-last-child */
+		ul.box li:nth-last-child(2) {
+			color: #f00;
+			font-size: 20px;
+		}
+		/* 倒数的后几个 */
+		ul.box li:nth-last-child(-n+ 3) {
+			color: #0f0;
+			font-size: 30px;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>列表元素</li>
+		<li>列表元素</li>
+		<li>列表元素</li>
+		<li>列表元素</li>
+		<li>列表元素</li>
+		<li>列表元素</li>
+		<li>列表元素</li>
+		<li>列表元素</li>
+		<li>列表元素</li>
+		<li>列表元素</li>
+	</ul>
+	<div>
+		<div>列表元素</div>
+		<div>列表元素</div>
+		<div>列表元素</div>
+		<div>列表元素</div>
+		<div>列表元素</div>
+		<div>列表元素</div>
+		<div>列表元素</div>
+		<div>列表元素</div>
+		<div>列表元素</div>
+		<div>列表元素</div>
+		<div>列表元素</div>
+		<div>列表元素</div>
+	</div>
+
+
+	<!-- nth-lst-child -->
+
+	<ul class="box">
+		<li>列表元素001</li>
+		<li>列表元素002</li>
+		<li>列表元素003</li>
+		<li>列表元素004</li>
+		<li>列表元素005</li>
+		<li>列表元素006</li>
+		<li>列表元素007</li>
+		<li>列表元素008</li>
+	</ul>
+</body>
+</html>

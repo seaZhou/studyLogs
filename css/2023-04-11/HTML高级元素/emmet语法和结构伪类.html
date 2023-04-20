@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		div {
+			border: 1px solid #000;
+			/* bd1#cs */
+			border: 1px #ccc solid;
+		}
+	</style>
+</head>
+<body>
+	<!-- div>h1+p -->
+	<div>
+		<h1></h1>
+		<p></p>
+	</div>
+	<!-- *  -->
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+
+	<!-- div>span+p+(h1>span+i)+p -->
+	<div>
+		<span></span>
+		<p></p>
+		<h1><span></span><i></i></h1>
+		<p></p>
+	</div>
+	<!-- div>span+p+h1>span+i^p -->
+	<div>
+		<span></span>
+		<p></p>
+		<h1><span></span><i></i></h1>
+		<p></p>
+	</div>
+	<!-- div>span+p+h1>span+i^^p -->
+	<div>
+		<span></span>
+		<p></p>
+		<h1><span></span><i></i></h1>
+	</div>
+	<p></p>
+	<!-- ()分组 -->
+	<!-- (header>div>p+span)+footer -->
+	<header>
+		<div>
+			<p></p>
+			<span></span>
+		</div>
+	</header>
+	<footer></footer>
+
+
+	<!-- *属性和内容用的比较多!!!! -->
+	<!-- a[href="http://www.baidu.com"]{百度一下} -->
+	<a href="http://www.baidu.com">百度一下</a>
+
+	<!-- ul>li{列表内容}*10 -->
+	<ul>
+		<li>列表内容</li>
+		<li>列表内容</li>
+		<li>列表内容</li>
+		<li>列表内容</li>
+		<li>列表内容</li>
+		<li>列表内容</li>
+		<li>列表内容</li>
+		<li>列表内容</li>
+		<li>列表内容</li>
+		<li>列表内容</li>
+	</ul>
+
+	<!-- $(数字) -->
+	<!-- ul>li{列表内容$}*10 -->
+	<ul>
+		<li>列表内容1</li>
+		<li>列表内容2</li>
+		<li>列表内容3</li>
+		<li>列表内容4</li>
+		<li>列表内容5</li>
+		<li>列表内容6</li>
+		<li>列表内容7</li>
+		<li>列表内容8</li>
+		<li>列表内容9</li>
+		<li>列表内容10</li>
+	</ul>
+
+	<!-- ul>li{列表内容$$$}*10  -->
+	<ul>
+		<li>列表内容001</li>
+		<li>列表内容002</li>
+		<li>列表内容003</li>
+		<li>列表内容004</li>
+		<li>列表内容005</li>
+		<li>列表内容006</li>
+		<li>列表内容007</li>
+		<li>列表内容008</li>
+		<li>列表内容009</li>
+		<li>列表内容010</li>
+	</ul>
+	<!-- 隐式标签 -->
+	<!-- ul>.item{列表内容$$$}*10 -->
+	<ul>
+		<li class="item">列表内容001</li>
+		<li class="item">列表内容002</li>
+		<li class="item">列表内容003</li>
+		<li class="item">列表内容004</li>
+		<li class="item">列表内容005</li>
+		<li class="item">列表内容006</li>
+		<li class="item">列表内容007</li>
+		<li class="item">列表内容008</li>
+		<li class="item">列表内容009</li>
+		<li class="item">列表内容010</li>
+	</ul>
+</body>
+</html>

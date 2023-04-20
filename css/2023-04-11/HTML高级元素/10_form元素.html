@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>form的使用</title>
+</head>
+<body>
+	<form method="post" action="http://aaaa.com" target="_blank">
+		<div>
+			<div>
+				<label for="username">
+					用户:<input type="text" name="username" id="username">
+				</label>
+			</div>
+			<div>
+				<label for="password">
+					密码:<input id="password" name="password" type="password">
+				</label>
+			</div>
+		</div>
+		<!-- 性别 -->
+		<div>
+			性别:
+			<label for="male"><input id="male" type="radio" name="sex" value="0">男</label>
+			<label for="female"><input id="female" type="radio" name="sex" value="1">女</label>
+		</div>
+		<!-- 爱好 -->
+		<div>
+			爱好:
+			<label for="1"><input id="1" name="hobby" type="checkbox" value="1">篮球</label>
+			<label for="2"><input id="2" name="hobby" type="checkbox" value="2">排球</label>
+			<label for="3"><input id="3" name="hobby" type="checkbox" value="3">足球</label>
+			<label for="4"><input id="4" name="hobby" type="checkbox" value="4">乒乓球</label>
+		</div>
+		<!-- 提交 -->
+		<div>
+			<button type="reset">重置按钮</button>
+			<button type="submit">提交按钮</button>
+		</div>
+	</form>
+
+	<!-- 模拟百度一下 -->
+	<form action="https://www.baidu.com/s">
+		<input type="text" name="wd">
+		<button type="submit">百度一下</button>
+	</form>
+</body>
+</html>

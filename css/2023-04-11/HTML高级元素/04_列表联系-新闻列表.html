@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/rest.css">
+	<!-- 
+
+		所有案例的想法:
+		1.先定结构
+		2.重置样式(body, a, ul...)
+		3.先整体后局部
+			* 顺序:按照从外往里,从上往下
+		4.去掉重复的代码(css)
+			* 将重复的逻辑放到一个单独的class中(.icon)
+			* 不同的代码抽到不同的class(.new .hot)
+	 -->
+	<style>
+			ul >li a:hover {
+				color:#f04142;
+			}
+			/* 局部 */
+			ul >li .ranking {
+				display: inline-block;
+				width: 24px;
+				height: 24px;
+				margin-right: 5px;
+				line-height: 24px;
+				text-align: center;
+				font-weight: 700;
+				color: #999;
+			}
+			
+			/* 结构伪类 */
+
+			ul >li:nth-child(1) .ranking {
+				color: #f00;
+			}
+			ul >li:nth-child(2) .ranking {
+				color: #0f0;
+			}
+			ul >li:nth-child(3) .ranking {
+				color: #00f;
+			}
+			ul> li .content {
+				display: inline-block;
+			}
+			ul >li {
+				margin: 30px 0;
+			}
+			ul >li .icon { 
+				position: relative;
+				top: 2px;
+				left: 4px;
+				display: inline-block;
+				width: 16px;
+				height: 16px;
+				background-image: url('../../../image/hot.svg');
+			}
+
+	</style>
+</head>
+<body> 
+	
+	<ul>
+		<li class="item">
+			<a href="#">
+				<span class="ranking">1</span>
+				<div class="content">江西崛起速度最快的县，一江两岸高楼林立，红色文化浓厚景美</div>
+				<i class="icon"></i>
+			</a>
+		</li>
+		<li class="item">
+			<a href="#">
+				<span class="ranking">2</span>
+				<div class="content">江西崛起速度最快的县，一江两岸高楼林立，红色文化浓厚景美</div>
+				<i class="icon"></i>
+			</a>
+		</li>
+		<li class="item">
+			<a href="#">
+				<span class="ranking">3</span>
+				<div class="content">江西崛起速度最快的县，一江两岸高楼林立，红色文化浓厚景美</div>
+				<i class="icon"></i>
+			</a>
+		</li>
+		<li class="item">
+			<a href="#">
+				<span class="ranking">4</span>
+				<div class="content">江西崛起速度最快的县，一江两岸高楼林立，红色文化浓厚景美</div>
+				<i class="icon"></i>
+			</a>
+		</li>
+		<li class="item">
+			<a href="#">
+				<span class="ranking">5</span>
+				<div class="content">江西崛起速度最快的县，一江两岸高楼林立，红色文化浓厚景美</div>
+				<i class="icon"></i>
+			</a>
+		</li>
+
+	</ul>
+</body>
+</html>

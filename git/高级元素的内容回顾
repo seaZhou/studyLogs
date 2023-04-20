@@ -1,0 +1,22 @@
+### 一.列表元素
+
+#### 1.1 三种列表
+
+* ol > li
+* ul > li
+* dl > dt >dd
+
+#### 1.2列表案例
+
+* 总结思路
+
+### 二.table元素
+
+股票表格
+
+```
+table {
+border-collapse: collapse;
+}
+```
+
