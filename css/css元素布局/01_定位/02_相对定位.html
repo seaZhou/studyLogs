@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.text {
+			/* 
+			relative 仍然按照标准流布局
+			但是可以通过left top right bottom 来进行定位
+			定位参照对象是元素自己原来的位置
+
+			应用场景:在不影响其他元素的前提下,对当前元素位置进行微调;;
+			*/
+			position: relative;
+			left: -30px;
+			top: -50px;
+		}
+
+		div {
+			font-size: 20px;
+		}
+		span {
+			font-size: 12px;
+			position: relative;
+			bottom: 8px;
+		}
+	</style>
+</head>
+<body>
+	<!-- 定位允许您从正常的文档流布局中取出元素,并且是他们具有不同的行为:
+	例如:放在另外一个元素上面
+	始终保持在浏览器视窗内的同一位置 -->
+
+	<!-- position: stati(静态,默认值)c/relative(相对)/absolute(绝对)/sticky(粘性)/fixed(固定) -->
+
+
+	
+	<!-- <span>我是span元素</span>
+	<strong class="text">我是strong元素</strong>
+	<img src="../../../image/02.avif" alt="">
+	<div>我是div元素</div> -->
+	<!-- 相对定位案例: -->
+	<div>
+		3<span>2</span> + 2<span>3</span> = 17
+	</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		div.box {
+			background-color: #333;
+		}
+		.top-bar {
+			background-image: url(../../../image/topbar.png);
+			background-repeat: no-repeat;
+			display: inline-block;
+		}
+		i.hot-icon {
+			background-position: -192px 0;
+			width: 26px;
+			height: 13px;
+		}
+
+		i.logo-icon {
+			background-position: 0 -19px;
+			width: 157px;
+			height: 33px;
+		}
+		i.video-icon {
+			background-position: 0 -140px;
+			width: 90px;
+			height: 32px;
+		}
+	</style>
+</head>
+<body>
+	<!-- 减少网页的http请求,加快网页响应速度,减轻服务器压力
+	减少图片的总大小
+	解决了图片命名的困扰,只需要针对一张集合的图片命名 -->
+	<div class="box">
+		<i class="top-bar logo-icon"></i>
+		<i class="top-bar hot-icon"></i>
+		<i class="top-bar video-icon"></i>
+	</div>
+</body>
+</html>

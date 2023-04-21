@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		/* 相对于视口 */
+		/* .text {
+			position: fixed;
+			top: 30px;
+			right: 30px;
+		} */
+		.handle {
+			position: fixed;
+			right: 30px;
+			bottom: 30px;
+		}
+		.handle .item {
+			width: 100px;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			background: brown;
+			color: #fff;
+			border-radius: 8px;
+			cursor: pointer;
+		}
+		.handle .item:hover {
+			background-color: #f00;
+		}
+		.top {
+			margin: 0 0 10px;
+		}
+	</style>
+</head>
+<body>
+	<!--
+	fixed会使元素脱离元素标准流 
+	可以通过left/right/top/bottom进行定位
+	定位参照对象是视口(viewport)
+	当画布滚动时,固定不动	
+	-->
+	
+	<!-- <span>我是span元素</span>
+	<strong class="text">我是strong元素</strong>
+	<img src="../../../image/02.avif" alt="">
+	<div>我是div元素</div> -->
+	<!-- 案例 -->
+	<div class="handle">
+		<div class="item top">顶部</div>
+		<div class="item bottom">反馈</div>
+		<br>
+	</div>
+	<br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br>
+</body>
+</html>

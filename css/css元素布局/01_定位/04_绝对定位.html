@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=`, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.cointainer {
+			position: relative;
+			width: 800px;
+			height: 500px;
+			background-color: #f00;
+		}
+		.box {
+			position: relative;
+			width: 600px;
+			height: 400px;
+			background-color: #0f0;
+		}
+		.text {
+			position: absolute;
+			/* 设置的四个值 */
+			/* 在没有祖先元素定位的情况下,相对于是谁?视口 */
+			right: 30px;
+
+		}
+		.box img {
+			width: 100px;
+		}
+	</style>
+</head>
+<body>
+	<!-- 
+		元素会脱离normal flow (脱离标准流)
+		定位参照对象是最邻近的定位祖先元素
+		如果找不到这样的祖先元素,相对于视口
+	 -->
+	 hhhhhh
+	 <div class="cointainer">
+		<div class="box">
+			<span>我是span元素</span>
+			<strong class="text">我是strong元素</strong>
+			<img src="../../../image/02.avif" alt="">
+			<div>我是div元素</div>
+		 </div>
+	 </div>
+	 呵呵呵呵
+</body>
+</html>
