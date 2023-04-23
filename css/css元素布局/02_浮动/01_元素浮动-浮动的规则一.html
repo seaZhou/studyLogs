@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.box {
+			width: 200px;
+			height: 200px;
+			background-color: #00f;
+			margin: 0 auto;
+			padding: 20px;
+		}
+		.item1, .item2 {
+			background-color: #f00;
+		}
+		.item1 {
+			/* 定位脱离标准流 */
+			/* position: fixed;
+			left: 0;
+			top: 5px;
+			*/
+			background-color: #0f0;
+			float: left;
+		}
+		.item2 {
+			float: right;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="item1">我是item1</div>
+		<div class="item2">我是item2</div>
+	</div>
+</body>
+</html>

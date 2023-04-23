@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		/* 公共的class */
+		.wrap {
+			width: 1190px;
+			margin: 0 auto;
+			background-color: orange;
+			min-height: 800px;
+		}
+
+		/* 布局样式 */
+		/* 方案3:设置margin负值 */
+		.box {
+			margin-right: -10px;
+			background-color: #f00;
+		}
+		.item {
+			width: 230px;
+			height: 322px;
+			background-color: purple;
+			color: #fff;
+			/* 浮动 */
+			float: left;
+			margin-right: 10px;
+			margin-bottom: 10px;
+		}
+		/* 既然用浮动了,就不要用这种,有可能存在兼容性问题 */ 
+		/* 如果想要兼容性很强的情况下,就不要用这种 */
+		/* .item:nth-child(5n) {
+			margin-right: 0;
+		} */
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="box">
+			<div class="item item1">item1</div>
+			<div class="item item2">item2</div>
+			<div class="item item3">item3</div>
+			<div class="item item4">item4</div>
+			<div class="item item5">item5</div>
+		</div>
+	</div>
+</body>
+</html>
