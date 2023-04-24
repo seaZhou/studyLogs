@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		body {
+			padding: 0;
+			margin: 0;
+			background-color: #f5f5f5;
+		}
+		/* 最终解决方案, 公共的样式 */
+		.clear_fix::after {
+			content: '';
+			/* 必须加,display:block;才会有高度 */
+			display: block;
+			clear: both;
+			/* 浏览器兼容性 */
+			visibility: hidden;
+			height: 0;
+		}
+		.clear_fix {
+			*zoom: 1; /* IE6/7兼容性, 不进行缩放 */
+		}
+		.wrap {
+			width: 1190px;
+			margin: 0 auto;
+		}
+		.wrap .wrapper {
+			margin-right: -10px;
+		}
+		
+		.item {
+			width: 290px;
+			background-color: #fff;
+			margin-right: 10px;
+			margin-bottom: 10px;
+			float: left;
+		}
+		.item.left {
+			height: 370px;
+		}
+		.item.right {
+			height: 180px;
+		}
+		/* 其他的内容 */
+		.other {
+			height: 100px;
+			background-color: #438afe;
+		}
+		/* 真实开发情况下 */
+		/* 但是增加了,无意义的元素,违背了结构与样式分离的原则,不推荐 */
+		/* 线 */
+		/* .line {
+			clear: both;
+		} */
+	</style>
+</head>
+<body>
+	<!-- 因为所有的后代item元素,都是浮动的,脱离标准流 -->
+	<!-- 不会向父元素汇报高度,那么wrap元素压根就没有高度 -->
+	<div class="wrap">
+		<div class="wrapper clear_fix">
+			<div class="item left"></div>
+			<div class="item left"></div>
+			<div class="item right"></div>
+			<div class="item right"></div>
+			<div class="item right"></div>
+			<div class="item right"></div>
+
+			<!-- <div class="line"></div> -->
+		</div>
+	</div>
+
+	<!-- 我认为wrap没有高度,那么我们就会直接在上面显示 -->
+	<div class="other"></div>
+</body>
+</html>
