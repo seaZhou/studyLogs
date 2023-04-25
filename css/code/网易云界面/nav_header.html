@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>网易云头部</title>
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/common.css">
+	<style>
+		.top {
+			height: 70px;
+			background-color: #242424;
+			box-sizing: border-box;
+			border-bottom: 1px solid #000;
+		}
+		.topbar {
+			display: flex;
+			justify-content: space-between;
+			/* box-model */
+			height: 69px;
+			line-height: 69px;
+			/* font-text */
+			/* 其他 */
+			/* background-color: #00f; */
+			color: #fff;
+		}
+		.topbar .bar-left {
+			display: flex;
+		}
+		.topbar .bar-left .logo {
+			background-image: url('./image/topbar.png');
+			background-position: 0 0;
+		}
+		.topbar .bar-left .logo a {
+			/* text-indent 对行内非替换元素无效 */
+			display: block;
+			width: 157px;
+			padding-right: 20px;
+			text-indent: -999px;
+		}
+		.topbar .bar-left .list {
+			display: flex;
+		}
+		.topbar .bar-left .list .item {
+			position: relative;
+			display: block;
+			font-size:  14px;
+			color: #ccc;
+			padding: 0 19px;
+		}
+		.topbar .bar-left .list .item:hover,
+		.topbar .bar-left .list .item.active {
+			color: #fff;
+			background-color: #000;
+		}
+		.topbar .bar-left .list .item.active::after {
+			content: "";
+			position: absolute;
+			width: 12px;
+			height: 7px;
+			bottom: -1px;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			background: url('./image/topbar.png') -226px 0;
+		}
+		.topbar .bar-left .item .icon-hot {
+			position: absolute;
+			top: 21px;
+			left: 100px;
+		}
+
+		.topbar .bar-right {
+			display: flex;
+			align-items: center;
+			padding-right: 20px;
+		}
+		.topbar .bar-right .login:hover a {
+			color: #ccc;
+		}
+		.topbar .bar-right .login a {
+			color: #787878;
+		}
+		.topbar .bar-right .login a:hover {
+			color: #787878;
+			text-decoration: underline;
+		}
+
+
+		.topbar .bar-right .anthor a {
+			display: inline-block;
+			width: 90px;
+			height: 32px;
+			margin: 0 22px;
+			line-height: 32px;
+			color: #ccc;
+			text-align: center;
+			box-sizing: border-box;
+			border: 1px solid #4F4F4F;
+			border-radius: 20px;
+
+		}
+		.topbar .bar-right .anthor a:hover {
+			color: #fff;
+			border-color: #ccc;
+		}
+
+		.top .bar-right .search {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			width: 158px;
+			height: 32px;
+			box-sizing: border-box;
+			padding-right: 10px;
+			color: #9b9b9b;
+    	border-radius: 32px;
+			background: #fff url('./image/topbar.png') 0 -99px;
+		}
+		.top .bar-right .search input {
+			width: 118px;
+			font-size: 12px;
+		}
+		.top .bar-right .search input::-webkit-input-placeholder {
+			color: #9b9b9b;
+		}
+	</style>
+</head>
+<body>
+	<div class="top">
+		<div class="topbar wrapper_01">
+			<div class="bar-left">
+				<h1 class="logo">
+					<a href="">网易云音乐</a>
+				</h1>
+				<ul class="list">
+					<li><a href="#" class="item active">发现音乐</a></li>
+					<li><a href="#" class="item">我的音乐</a></li>
+					<li><a href="#" class="item">关注</a></li>
+					<li><a href="#" class="item">商城</a></li>
+					<li><a href="#" class="item">音乐人</a></li>
+					<li>
+						<a href="#" class="item">
+							下载客户端
+							<i class="topbar_sprite topbar_icon_hot icon-hot"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="bar-right">
+				<div class="search">
+					<input type="text" placeholder="音乐/视频/电台/用户">
+				</div>
+				<div class="anthor">
+					<a href="">创作者中心</a>
+				</div>
+				<div class="login">
+					<a href="">登录</a>
+				</div>
+			</div>
+		</div>
+		<div class="topnav"></div>
+	</div>
+</body>
+</html> 

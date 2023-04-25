@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.container {
+			width: 500px;
+			height: 500px;
+			background-color: orange;
+			display: flex;
+
+			/* flex-wrap: wrap; */
+			/* 
+			1.wrap:(多行)
+			2.nowrap:默认(单行)
+			3.wrap-reverse (了解)
+			
+			*/
+			flex-flow: row-reverse wrap; /* 简写属性 */
+		}
+		.item {
+			width: 120px;
+			height: 120px;
+			background-color: #f00;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="item item1">001</div>
+		<div class="item item2">002</div>
+		<div class="item item3">003</div>
+		<div class="item item4">004</div>
+		<div class="item item5">005</div>
+		<div class="item item6">006</div>
+		<div class="item item7">007</div>
+	</div>
+	<script src="./js/itemRandomColor.js"></script>
+</body>
+</html>

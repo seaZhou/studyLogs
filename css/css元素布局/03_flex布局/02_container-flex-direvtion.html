@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.container {
+			width: 500px;
+			height: 500px;
+			background-color: orange;
+			display: flex;
+			/* 修改main axis(主轴的方向) */
+			flex-direction: column-reverse;
+			/* row-reverse: row 的反转 */
+			/* column-reverse: column 的反转 */
+			/* column: column 的方向 */
+		}
+		.item {
+			width: 120px;
+			height: 120px;
+			background-color: #f00;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="item item1">001</div>
+		<div class="item item2">002</div>
+		<div class="item item3">003</div>
+	</div>
+	<script src="./js/itemRandomColor.js"></script>
+</body>
+</html>
