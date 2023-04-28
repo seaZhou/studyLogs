@@ -11,10 +11,19 @@ body {
 	width: 980px;
 	margin: 0 auto;
 }
+.wrapper_03 {
+	width: 982px;
+	margin: 0 auto;
+}
 
 .topbar_sprite {
 	display: inline-block;
 	background-image: url('../image/topbar.png');
+}
+
+.banner_sprite {
+	display: inline-block;
+	background-image: url(../image/banner_sprite.png);
 }
 
 .topbar_icon_hot {
