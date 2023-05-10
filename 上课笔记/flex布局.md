@@ -92,4 +92,4 @@
   * flex-shrink
   * order
   * align-self
-  * flex
+  * flexw

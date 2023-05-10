@@ -1,0 +1,96 @@
+.banner {
+	background: url(../image/banner.jpg) center center / 6000px;
+}
+.banner .area {
+	position: relative;
+	height: 285px;
+}
+.banner .area-left {
+	position: relative;
+	width: 730px;
+}
+.banner .area-left .img-list {
+	display: flex;
+	overflow: hidden;
+}
+.banner .area-left .img-list li {
+	flex-shrink: 0;
+	width: 100%;
+}
+.banner .area-left .img-list .item {
+	display: block;
+}
+.area-left .img-list .item img {
+	width: 100%;
+}
+/* 点的列表 */
+.banner .area-left .dots-list {
+	position: absolute;
+	bottom: 5px;
+	left: 0;
+	right: 0;
+	/* margin: 0 auto; */
+	display: flex;
+	justify-content: center;
+}
+.banner .area-left .dots-list li {
+margin: 0 2px;
+}
+.banner .area-left .dots-list .item {
+display: inline-block;
+width: 20px;
+height: 20px;
+background-position: 3px -343px;
+}
+.banner .area-left .dots-list .item.active,
+.banner .area-left .dots-list .item:hover {
+background-position: -16px -343px;
+}
+/* 右侧内容 */
+.banner .area-right {
+position: absolute;
+right: -1px;
+top: 0;
+bottom: 0;
+width: 254px;
+background: url(../image/download_sprite.png);
+}
+.banner .area-right .download {
+display: block;
+width: 215px;
+height: 56px;
+margin: 186px 0 0 19px;
+text-indent: -9999px;
+}
+.banner .area-right .download:hover {
+background: url(../image/download_sprite.png) 0 -290px;
+}
+.banner .area-right .desc {
+margin: 10px 0;
+text-align: center;
+font-size: 12px;
+color: #8d8d8d;
+}
+.banner .area .control {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto 0;
+	width: 37px;
+	height: 63px;
+	background-image: url(../image/banner_sprite.png);
+}
+.banner .area .control.left {
+left: -70px;
+background-position: 0 -360px;
+}
+.banner .area .control.left:hover {
+background-position: 0 -430px;
+}
+.banner .area .control.right {
+right: -70px;
+background-position: 0 -508px;
+}
+.banner .area .control.right:hover {
+background-position: 0 -578px;
+}
