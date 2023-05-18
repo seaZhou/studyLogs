@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.container {
+			height: 500px;
+			background-color: orange;
+		}
+		.box3 {
+			display: inline-block;
+			height: 100px;
+			background-color: #f00;
+			/* 两件事情: 
+					1.让元素向下位移父元素的50%
+					2.让元素向上位移自身的50%
+			*/
+			/* margin-top 的百分比是相对于包含块(父元素) 的宽度*/
+			transform: translate(0, -50%);
+			position: relative;
+			top: 50%;
+		}
+	</style>
+</head>
+<body>
+	<!-- 
+		水平居中:
+			1.行内级元素:
+				*设置父元素的text-align:center;
+
+			2.块级元素:
+				*设置当前块级元素(宽度)margin:0 auto;
+
+			3.绝对定位:
+				* 元素有宽度的情况下:left:0;right:0;margin:0 auto;
+
+			4.flex:
+				* justify-content: center;
+
+	 -->
+
+	 <!-- 
+		垂直居中:
+		*1.绝对定位
+			弊端:
+				1> 必须使用定位(脱离标准流)
+				2>必须给元素设置高度
+		*2.flex布局
+			弊端:
+				1>当前flex局部中所有的元素都会被垂直居中
+				2>相对来说,兼容性差一点点(基本可以忽略 )
+		*3.top/translate
+
+	  -->
+
+		<div class="container">
+			<div class="box3">jason</div>
+		</div>
+</body>
+</html>

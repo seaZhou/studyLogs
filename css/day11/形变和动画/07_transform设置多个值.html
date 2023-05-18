@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width= , initial-scale=1.0">
+	<title>transform设置多个值</title>
+	<style>
+		.box {
+			width: 200px;	
+			height: 100px;
+			background-color: orange;
+			/* 修改当前元素的形变的原点位置 */
+			/* 必须是<length>,<percentage> 或者 left right top bottom center关键之中的一个 */
+			transform-origin: center top;
+		}
+		.box:hover {
+			transform: skew(-10deg, 10deg);
+		}
+
+		/* 
+			<transform-function>+
+				+:一个或者多个,并且多个之间以空格分隔
+				transform:scale() tarnslate()
+			<box-shasow>#
+				#:一个或者多个,多个之间以,分隔
+				box-shadow: 1px 1px 1px 1px #f00,
+				
+		*/
+	</style>
+</head>
+<body>
+	<div class="box">我是div元素</div>
+</body>
+</html>

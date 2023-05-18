@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width= , initial-scale=1.0">
+	<title>skew</title>
+	<style>
+		.box {
+			width: 200px;	
+			height: 100px;
+			background-color: orange;
+			/* 修改当前元素的形变的原点位置 */
+			/* 必须是<length>,<percentage> 或者 left right top bottom center关键之中的一个 */
+			transform-origin: center top;
+		}
+		.box:hover {
+			transform: skew(-10deg, 10deg);
+		}
+	</style>
+</head>
+<body>
+	<div class="box">我是div元素</div>
+</body>
+</html>

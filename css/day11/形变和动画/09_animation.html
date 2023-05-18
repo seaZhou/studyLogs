@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.box {
+			width: 200px;
+			height: 100px;
+			background-color: orange;
+			/* box 要执行keyframes 动画 */
+			/* 元素停留在哪一个位置 forwards 是最后一个位置 */
+			animation: moveAnim 3s ease-in-out forwards;
+		}
+		@keyframes moveAnim {
+			0% {
+				transform: translate(0, 0) scale(.5, .5);
+			} 
+			33% {
+				transform: translate(0, 200px) scale(1.2, 1.2);
+			}
+			66% {
+				transform: translate(400px, 200px) scale(1, 1);
+			}
+			100% {
+				transform: translate(400px, 0) scale(.5, .5);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html> 
