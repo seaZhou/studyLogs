@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		/* @media (min-width: 320px) and (max-width: 375px) {
+			.box {
+				font-size: 15px;
+			}
+		}
+		@media (min-width: 375px) and (max-width: 414px) {
+			.box {
+				font-size: 18px;
+			}
+		}
+		@media (min-width: 414px) and (max-width: 480px) {
+			.box {
+				font-size: 21px;
+			}
+		}
+		@media (min-width: 480px) {
+			.box {
+				font-size: 24px;
+			}
+		} */
+		/* 下面和上面的效果一样,因为css层叠效应 */
+		@media (min-width: 320px) {
+			.box {
+				font-size: 15px;
+				color: red;
+			}
+		}
+		@media (min-width: 375px) {
+			.box {
+				font-size: 18px;
+				color: pink;
+			}
+		}
+		@media (min-width: 414px) {
+			.box {
+				font-size: 21px;
+				color: blueviolet; 
+			}
+		}
+		@media (min-width: 480px) {
+			.box {
+				font-size: 24px;
+				color: skyblue;
+			}
+		} 
+	</style>
+</head>
+<body>
+	<div class="box">
+		我是box
+	</div>
+</body>
+</html>

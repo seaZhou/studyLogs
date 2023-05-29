@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div class="box" data-name="jason" data-age="25" data-heigth="1.65">
+		box
+	</div>
+	<script>
+		// 在小程序中就是通过data- 全局属性传递数据的
+		const box = document.querySelector('.box')
+		console.log(box.dataset)
+	</script>
+</body>
+</html>

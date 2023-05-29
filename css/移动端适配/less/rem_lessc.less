@@ -1,0 +1,17 @@
+.poToRem(@px) {
+	// 这样的复用性很差
+	// width: 1rem * (@px / 37.5);
+	// height: 1rem * (@px / 37.5);
+
+	result: 1rem * (@px / 37.5);
+}
+
+.box {
+	width: .poToRem(100)[result];
+	height: .poToRem(100)[result];
+	background-color: orange;
+}
+
+p {
+	font-size: .poToRem(14)[result];
+}

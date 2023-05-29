@@ -1,0 +1,75 @@
+// 1.兼容css代码
+
+// .box {
+// 	width: 200px;
+// 	height: 200px;
+// 	line-height: 200px;
+// 	text-align: center;
+// 	color: #fff;
+// 	background-color: skyblue;
+// }
+
+// 2.定义变量
+// @mainColor: #f3c258;
+@mainColor: #3bbcfb;
+@smallFontSize: 12px;
+@normalFontSize: 14px;
+@bigFontSize: 18px;
+
+// 常规写法
+// .box .pel {
+// 	color: @mainColor;
+// 	font-size: @normalFontSize;
+// }
+
+// .box h1 .keyword {
+// 	color: @mainColor;
+// 	font-size: @bigFontSize;
+// }
+
+// .box p .link {
+// 	color: @mainColor;
+// 	font-size: @smallFontSize;
+// }
+
+// less写法
+.box {
+	p.pel {
+		color: @mainColor;
+		font-size: @normalFontSize;
+	}
+	h1 {
+		.keyword {
+			color: @mainColor;
+			font-size: @bigFontSize;
+		}
+	}
+	p {
+		a.link {
+			color: @mainColor;
+			font-size: @smallFontSize;
+			// &:hover  === a.link:hvoer
+			&:hover {
+				color: #176afe;
+			}
+		}
+	}
+}
+
+// & 符号的练习
+.list {
+	li {
+		font-size: 20px;
+		// transform: scale(0.7);
+		// transform-origin: left top;
+		&:nth-child(1) {
+			color: orange;
+		}
+		&:nth-child(2) {
+			color: #f00;
+		}
+		&:hover {
+			color: @mainColor;
+		}
+	}
+}
