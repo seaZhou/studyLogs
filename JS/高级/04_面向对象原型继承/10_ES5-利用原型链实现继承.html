@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function Person (name, age) {
+			this.name = name
+			this.age = age
+		}
+		Person.prototype.running = function (name) {
+			console.log('running~~')
+		}
+		Person.prototype.eating = function (name) {
+			console.log('eating~~')
+		}
+
+		
+		// 方式二：创建一个父类的实例对象（new Person()),用这个实例对象来作为子类的原型对象
+		// 这种方法还是很别扭
+		
+		
+
+		function Student (name, age, sno, score) {
+			// this.name = name
+			// this.age = age
+			this.sno = sno
+			this.score = score
+		}
+		var p = new Person("zhp", 18)
+		Student.prototype = p
+
+		Student.prototype.studying = function (name) {
+			console.log('studying~~')
+		}
+		
+
+		var stu1 = new Student('zhp', 20, 111, 100)
+		var stu2 = new Student('lyy', 25, 111, 100)
+		stu1.running()
+		stu1.studying()
+
+
+		console.log(stu1.name, stu1.age)
+		console.log(stu2.name, stu2.age)
+		console.log(stu1, stu2)
+
+
+		// 方法三:属性的继承使用借用构造函数
+
+	</script>
+</body>
+</html>

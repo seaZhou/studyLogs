@@ -1,0 +1,13 @@
+{
+  "name": "zhp_utils",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "keywords": [
+    "match",
+    "zhp",
+    "format"
+  ],
+  "author": "zhp",
+  "license": "MIT"
+}

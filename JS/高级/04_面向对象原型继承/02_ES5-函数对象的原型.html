@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var obj = {}
+		function foo () {}
+		// 1.将函数看成是一个普通的对象时,它是具备__proto__(隐式原型)
+		// 作用:查找key对应的value时,会找到对象原型的
+		console.log(obj.__proto__)
+		console.log(foo.__proto__)
+
+		// 2.将函数看成是一个函数时,它是具备prototype(显示原型)
+		// 作用:是为了构造原型
+		console.log(foo.prototype)
+		console.log(obj.prototype) // 对象是没有prototype
+
+		// new操作
+		// 1.创建一个空对象
+		var obj = {}
+		// 2.将这个对象赋值给this
+		this = obj
+		// 3.将函数的显示原型赋值给这个对象作为它的隐式原型
+		obj.__proto__ = Person.prototype
+		// 4.执行函数体中的代码
+		// 5.将这个对象默认返回
+	</script>
+</body>
+</html>

@@ -29,3 +29,27 @@
 
 * 在导入时不需要使用{},并且可以自己来指定名字;
 * 它也方便我们和现有的CommonJS等规范相互操作;
+
+##### 7.
+
+* 不允许在逻辑代码中编写import导入声明语法,只能写到js代码顶层
+
+* 如果确实是逻辑成立时,才需要导入某个模块
+
+  * 就需要使用import函数
+
+    * import 返回的是promise
+
+    * ```js
+      const importPromise = import('./foo.js')
+      importPromise.then(res => {
+      	console.log(res.name, res.age)
+      })
+      
+      // 真实开发中
+      import('./foo.js').then(res => {
+          console.log(res)
+      })
+      ```
+
+  * import函数的使用

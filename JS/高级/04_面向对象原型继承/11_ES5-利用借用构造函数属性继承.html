@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function Person (name, age) {
+			console.log(this, '当前this')
+			this.name = name
+			this.age = age
+		}
+		Person.prototype.running = function (name) {
+			console.log('running~~')
+		}
+		Person.prototype.eating = function (name) {
+			console.log('eating~~')
+		}
+
+		
+		// 方式二：创建一个父类的实例对象（new Person()),用这个实例对象来作为子类的原型对象
+		// 这种方法还是很别扭
+		function Student (name, age, sno, score) {
+			// this.name = name
+			// this.age = age
+			// 重点:借用构造函数
+			Person.call(this, name, age) // 调用两次
+			this.sno = sno
+			this.score = score
+		}
+		var p = new Person("zhp", 18) // 调用一次
+		Student.prototype = p
+
+		Student.prototype.studying = function (name) {
+			console.log('studying~~')
+		}
+		
+
+		var stu1 = new Student('zhp', 20, 111, 100)
+		var stu2 = new Student('lyy', 25, 111, 100)
+		stu1.running()
+		stu1.studying()
+
+
+		console.log(stu1.name, stu1.age)
+		console.log(stu2.name, stu2.age)
+		console.log(stu1, stu2)
+
+
+		// 方法三:属性的继承使用借用构造函数
+		// 借用继承的做法非常简单,在子类型构造函数的内部调用父类型构造函数
+		// *** 因为函数可以在任意的时刻被调用
+		// *** 因此通过apply()和call()方法也可以在新创建的对象上执行构造函数
+		// apply()和call()方法
+
+
+		// 组合继承存在的问题
+		// 1.父类构造函数都会被调用两次
+		// 2.所有的子类实例事实上都会拥有两份父类的属性
+		// 2.1 一个在当前的实例自己里面(也就是person本身),另一份在子类对应的原型对象中(也就是peroson.__proto__里面)
+
+
+	</script>
+</body>
+</html>
