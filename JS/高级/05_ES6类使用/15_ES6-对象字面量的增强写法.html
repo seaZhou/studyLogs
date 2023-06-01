@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		/***
+		 * 1.属性的增强
+		 * 2.方法的增强
+		 * 3.计算属性的写法
+		 * **/ 
+
+		 var name = 'zhp'
+		 var age = 20
+
+		 var key = 'address' + ' city'
+		 var obj = {
+			// 属性增强
+			name,
+			age,
+			// 方法增强
+			swimming() {
+				console.log(this) // obj
+			},
+			// 这个不算
+			eating: () => {
+				console.log(this, 'window') // window
+			},
+			// 计算属性增强
+			[key]: '成都'
+		 }
+
+		//  module.exports = {
+		// 	name,
+		// 	age
+		//  }
+		obj.swimming()
+		obj.eating()
+		var result = function foo () {
+			return { message, info }
+		}
+
+		// 解构Destructuring
+		// es6新增了一个从数组活对虾中方便获取数据的方法,称之为解构
+		var names = ['abc', 'cbx', undefined, 'ddd', 'fff']
+		var obj1 = { name: 'zhp', age: 18 , height: 1.88, color: 'blue'}
+		// 1.数组的结构
+		
+		// var name1 = names[0]
+		// var name2 = names[1]
+		// var name3 = names[2]
+		// 1.1基本使用
+		// var [name1, name2, name3] = names
+		// 1.2顺序问题：严格的顺序
+		var [name1, , name3] = names
+		console.log(name1, name3)
+
+		// 1.3 结构出数组
+
+		var [name1, name2, ...newNames] = names
+		console.log(name1, name2, newNames)
+
+		// 1.4结构的默认值
+
+		var [name1, name2, name3 = 'default'] = names
+		console.log(name1, name2, name3)
+		// 2.对象的结构
+		// 2.1基本使用
+		var { name, age, height } = obj1
+		console.log(name, age, height)
+
+		// 2.2顺序问题：没有顺序问题,根据key来结构的
+		var { height, name, age } = obj1
+		console.log(name, age, height)
+
+		// 2.3 对变量进行重命名
+		var {
+			height: h,
+			name: n,
+			age: a
+		} = obj1
+		console.log(n, a, h)
+
+		// 2.4默认值
+		var {
+			height: h,
+			name: n,
+			age: a,
+			adress: ad = '中国'
+		} = obj1
+		console.log(n, a, h, ad)
+
+		// 2,5对象的剩余内容
+		var {
+			name,
+			age,
+			...newObj
+		} = obj1
+		console.log(name, age, newObj)
+
+		// 应用:在函数中(其他类似的地方)
+
+		function getPosition ({ x, y }) {
+			console.log(x, y)
+		}
+		getPosition({ x: 10, y: 20 })
+
+	</script>
+</body>
+</html>

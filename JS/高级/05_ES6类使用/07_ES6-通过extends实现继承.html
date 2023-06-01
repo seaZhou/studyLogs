@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// 定义一个Perso父类(超类)
+		// 子类又叫派生类
+		class Person {
+			constructor(name, age) {
+				this.name = name
+				this.age = age
+			}
+			running() {
+				console.log(this.name +'~~running')
+			}
+			eating() {
+				console.log('~~eating')
+			}
+		}
+
+		class Student extends Person {
+			constructor(name, age, sno, score) {
+				super(name, age)
+				// 在使用this之前必须先调用super的constructor方法
+				/**
+				 *
+				 *  
+				 **/
+				this.sno = sno
+				this.score = score
+			}
+			studying() {
+				console.log('~~studying')
+			}
+		}
+
+		class Teacher extends Person {
+			constructor(name, age, title) {
+				super(name, age)
+				this.title = title
+			}
+			teaching() {
+				console.log('~~teaching')
+			}
+		}
+
+		let stu1 = new Student('lyy', 12)
+		let teach1 = new Teacher('jason', 20)
+		console.log(stu1.name)
+		stu1.running()
+		console.log(teach1.name)
+		teach1.running()
+	</script>
+</body>
+</html>

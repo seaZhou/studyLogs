@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// foo 相当于 new Function()
+		// foo.__proto__ = Function.prototype
+		// function foo (name, age) {
+		// 	console.log(this, name, age)
+		// }
+		// // 1.对象中的某些属性和方法是来自与Funtion.prototype
+		// // test.__proto__ = Function.prototype
+		// function test () {}
+		// // 把foo当做一个对象,获取apply方法
+		// foo.apply('abc', ['zhp', 18])
+		// console.log(Function.prototype.call)
+		// console.log(Function.prototype.apply === foo.apply)
+
+		// // 2.在Function.prototype中添加的属性和方法,可以被所有函数获取
+		// Function.prototype.info = 'hello lyy'
+		// console.log(foo.info)
+		// console.log(test.info)
+
+		// Function.prototype.bar = function () {
+		// 	console.log('bar function execution')
+		// }
+		// test.bar();
+		// foo.bar();
+		// Array.prototype.slice.apply(arguments);
+		// [].slice.apply(arguments)
+// 封装 相似的逻辑放在一起,其他地方调用就好, 不一样的地方以参数的形式传进去即可
+
+function execFn (thisArg, otherArgs, fn) {
+	thisArg = (thisArg === null || thisArg === undefined)? window : Object(thisArg)
+		Object.defineProperty(thisArg, 'fn', {
+			enumerable: false,
+			configurable: true,
+			value: fn
+		})
+		console.log(thisArg.fn)
+		thisArg.fn(...otherArgs)
+		delete thisArg.fn
+	}
+
+	Function.prototype.hpExec = function (thisArg, otherArgs, fn) {
+		thisArg = (thisArg === null || thisArg === undefined)? window : Object(thisArg)
+		Object.defineProperty(thisArg, 'fn', {
+			enumerable: false,
+			configurable: true,
+			value: fn
+		})
+		console.log(thisArg.fn)
+		thisArg.fn(...otherArgs)
+		delete thisArg.fn
+	}
+
+		//手写apply-call-bind函数
+	function foo (name, age) {
+		console.log(this, name, age)
+	}
+	// // foo函数可以通过apply/call来调用
+	// foo.apply('aaa', ['zhp', 20])
+	// foo.call('bbb', 'lyy', 30)
+
+	// 1.如何给函数对象添加方法
+	Function.prototype.hpapply = function (thisArg, otherArgs) {
+		console.log(this, 'this') // --->> 指向当前调用的函数对象
+		// thisArg->传入的第一个参数,需绑定的this
+		// this() // 默认调用,独立函数调用 就是window
+		// thisArg.fn = this
+		// 1.获取到thisArg,并未确保是一个对象类型
+		// thisArg = (thisArg === null || thisArg === undefined)? window : Object(thisArg)
+		// Object.defineProperty(thisArg, 'fn', {
+		// 	enumerable: false,
+		// 	configurable: true,
+		// 	value: this
+		// })
+		// thisArg.fn(...otherArgs)
+
+		// delete thisArg.fn
+		execFn(thisArg, otherArgs, this)
+	}
+	// foo.hpapply({name: 'lyy'})
+	// foo.hpapply('abc', [12, 13, 14])
+	// foo.hpapply(null, 'null')
+	// foo.hpapply(undefined, 'undefined')
+
+	Function.prototype.hpcall = function (thisArg, ...otherArgs) {
+		// console.log(this, 'this') // --->> 指向当前调用的函数对象
+		// // thisArg->传入的第一个参数,需绑定的this
+		// // this() // 默认调用,独立函数调用 就是window
+		// // thisArg.fn = this
+		// // 1.获取到thisArg,并未确保是一个对象类型
+		// thisArg = (thisArg === null || thisArg === undefined)? window : Object(thisArg)
+		// Object.defineProperty(thisArg, 'fn', {
+		// 	enumerable: false,
+		// 	configurable: true,
+		// 	value: this
+		// })
+		// thisArg.fn(...otherArgs)
+
+		// delete thisArg.fn
+		execFn(thisArg, otherArgs, this)
+	}
+	
+
+
+	
+	// foo.hpcall(123, 'why', 19)
+
+	</script>
+</body>
+</html>

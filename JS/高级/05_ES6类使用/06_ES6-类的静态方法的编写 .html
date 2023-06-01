@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// 静态方法:类方法就是静态方法
+		let names = ['1', '2', '3', '4', '5']
+		class Person {
+			constructor (name, age) {
+				this.name = name
+				this.age = age
+			}
+			static randomPerson () {
+				console.log(this, 'this')
+				let randomName = names[Math.floor(Math.random() * names.length)]
+				return new this(randomName, Math.floor(Math.random() * 100))
+			}
+		}
+		let randomPerson = Person.randomPerson()
+		console.log(randomPerson, 'randomPerson')
+	</script>
+</body>
+</html>
